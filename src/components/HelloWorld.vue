@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-defineProps<{ msg: string }>()
+const props = defineProps({
+  msg: String,
+  startCount: Number,
+})
 
-const count = ref(0)
+const count = ref(props.startCount || 0)
 </script>
 
 <template>
