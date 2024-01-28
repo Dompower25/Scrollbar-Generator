@@ -4,7 +4,6 @@ Scrollbar-Generator
 
 ## Roadmap:
 - [x] Create Layout Figma
-- [x] Create Layout Figma
 - [ ] CSS Свойства для настройки Scrollbar 
     scrollbar-width
     scrollbar-color
