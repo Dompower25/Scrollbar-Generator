@@ -2,6 +2,12 @@ Scrollbar-Generator
 
 ## Roadmap
 
+## Roadmap:
+- [x] add SSG
+- [x] contacts section
+- [x] skills section
+- [ ] languages section
+
 -[x] Create Layout Figma
 
 -[ ] CSS Свойства для настройки Scrollbar 
