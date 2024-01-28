@@ -3,10 +3,9 @@ import { ref } from 'vue'
 
 const props = defineProps({
   msg: String,
-  startCount: Number,
 })
 
-const count = ref(props.startCount || 0)
+const count = ref(0)
 </script>
 
 <template>

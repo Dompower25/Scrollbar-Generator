@@ -2,6 +2,8 @@ Scrollbar-Generator
 
 ## Roadmap
 
+[x] Create Layout Figma
+
 [] CSS Свойства для настройки Scrollbar 
 
     [] scrollbar-width
@@ -9,8 +11,8 @@ Scrollbar-Generator
      ```Связанные понятия```
     [] scrollbar-gutter CSS-свойство
     [] scroll-behavior CSS-свойство
-    [] scroll-marginСокращенное свойство CSS
-    [] scroll-paddingСокращенное свойство CSS
+    [] scroll-margin Сокращенное свойство CSS
+    [] scroll-padding Сокращенное свойство CSS
     [] scroll-snap-align CSS-свойство
     [] scroll-snap-stop CSS-свойство
     [] scroll-snap-type CSS-свойство
@@ -19,3 +21,5 @@ Scrollbar-Generator
     [] scrollbar роль ARIA
 
 [] Кроссбраузерность (Свойства CSS не работающие в других браузерах)
+
+[] Copy styles button
