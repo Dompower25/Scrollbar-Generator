@@ -1,23 +1,29 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import Wrapper from "./components/Wrapper.vue";
 </script>
 
 <template>
-  <HelloWorld msg="Vite + Vue" />
+  <div class="template">
+    <div class="main_title">css scroll visual constructor</div>
+    <Wrapper />
+  </div>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-  
+<style lang="scss">
+@import "./styles/index.scss";
+
+.template {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+.main_title {
+  color: $mainTextColor;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 38.73px;
+  text-transform: uppercase;
+  margin-bottom: 70px;
 }
 </style>
