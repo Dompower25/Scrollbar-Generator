@@ -6,7 +6,16 @@
       <section>
         <div class="scrollbar_box">
           <div class="scrollbar">
-            <img src="../assets/Group 11.svg" alt="" srcset="" />
+            <img src="../assets/Group 11.svg" alt="scrollbar" />
+          </div>
+          <div class="inputs_scrollbar_styles">
+            <div class="input_scrollbar_style">24px</div>
+            <div class="input_scrollbar_style">color picker</div>
+            <div class="input_scrollbar_style">8px</div>
+            <div class="input_scrollbar_style">color picker</div>
+            <div class="input_scrollbar_style">2px</div>
+            <div class="input_scrollbar_style">color picker</div>
+            <div class="input_scrollbar_style">border style picker</div>
           </div>
         </div>
       </section>
@@ -47,30 +56,63 @@
       height: 100%;
       display: flex;
 
-      justify-content: space-around;
       align-items: center;
     }
 
     .scrollbar_box {
       position: absolute;
-
-      width: 30px;
-      height: 322px;
-      background: rgba(255, 255, 255, 0.1);
       display: flex;
-      justify-content: center;
+      justify-content: space-around;
       align-items: center;
 
       padding: 15px 0px;
 
       .scrollbar {
-        position: inherit;
-        transform: translateX(-2px);
+        position: relative;
+        width: 30px;
+        height: 322px;
+        background: rgba(255, 255, 255, 0.1);
+        
+        img {
+          position: relative;
+          transform: translate(-23px, 20px);
+        }
+        
       }
+
+      .inputs_scrollbar_styles {
+        position: relative;
+        transform: translate(20px, -32px);
+
+        display: flex;
+        flex-direction: column;
+
+
+
+
+        .input_scrollbar_style {
+          font-family: "Inter", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 300;
+
+          color: rgba(255, 255, 255, 0.78);
+          font-weight: 400;
+          font-size: 14px;
+
+          padding: 8px 4px;
+          position: inherit;
+
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+          width: 200px; // возможно потребуется удалить, при использовании интутов.
+        }
+
+      }
+
     }
 
-    border: 1px solid white;
+    // border: 1px solid white;
   }
+
   .css_style_block {
     width: 100%;
     height: 100%;
