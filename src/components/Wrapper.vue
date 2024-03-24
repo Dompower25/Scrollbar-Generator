@@ -91,6 +91,10 @@
 
 
         .input_scrollbar_style {
+          position: relative;
+          top: 5px;
+          padding: 9px 4px;
+        
           font-family: "Inter", sans-serif;
           font-optical-sizing: auto;
           font-weight: 300;
@@ -98,9 +102,6 @@
           color: rgba(255, 255, 255, 0.78);
           font-weight: 400;
           font-size: 14px;
-
-          padding: 8px 4px;
-          position: inherit;
 
           border-bottom: 1px solid rgba(255, 255, 255, 0.2);
           width: 200px; // возможно потребуется удалить, при использовании интутов.
