@@ -21,7 +21,29 @@
       </section>
     </div>
     <div class="line"></div>
-    <div class="css_style_block"></div>
+    <div class="style_block">
+      <div class="buttons_switch_block">
+        <button>CSS</button>
+        <button>SASS</button>
+        <button>LESS</button>
+      </div>
+      <div class="code_style_wrapper">
+        body::-webkit-scrollbar { <br />
+        width: 1em; <br />
+        } <br />
+        body::-webkit-scrollbar-track {<br />
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); <br />
+        }<br />
+        body::-webkit-scrollbar-thumb { <br />
+        background-color: darkgrey; <br />
+        outline: 1px;<br />
+        solid slategrey; <br />
+        }<br />
+      </div>
+      <div>
+        <button>COPY</button>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -72,12 +94,11 @@
         width: 30px;
         height: 322px;
         background: rgba(255, 255, 255, 0.1);
-        
+
         img {
           position: relative;
           transform: translate(-23px, 20px);
         }
-        
       }
 
       .inputs_scrollbar_styles {
@@ -87,14 +108,11 @@
         display: flex;
         flex-direction: column;
 
-
-
-
         .input_scrollbar_style {
           position: relative;
           top: 5px;
           padding: 9px 4px;
-        
+
           font-family: "Inter", sans-serif;
           font-optical-sizing: auto;
           font-weight: 300;
@@ -106,19 +124,26 @@
           border-bottom: 1px solid rgba(255, 255, 255, 0.2);
           width: 200px; // возможно потребуется удалить, при использовании интутов.
         }
-
       }
-
     }
 
     // border: 1px solid white;
   }
 
-  .css_style_block {
+  .style_block {
     width: 100%;
     height: 100%;
 
-    border: 1px solid yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .code_style_wrapper {
+      padding: 15px;
+      background: rgba(0,0,0, 0.15);
+      margin: 20px 0;
+    }
+
   }
 }
 </style>
