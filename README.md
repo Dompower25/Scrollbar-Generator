@@ -18,4 +18,4 @@ Scrollbar-Generator
     Термин глоссария контейнера прокрутки
     scrollbar роль ARIA
 - [ ] Кроссбраузерность (Свойства CSS не работающие в других браузерах)
-- [ ] Buttons with background style
+- [ ] Buttons styles and props for styles
