@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import SButton from './button/SButton.vue';
+</script>
 
 <template>
   <div class="wrapper">
@@ -22,10 +24,10 @@
     </div>
     <div class="line"></div>
     <div class="style_block">
-      <div class="buttons_switch_block">
-        <button>CSS</button>
-        <button>SASS</button>
-        <button>LESS</button>
+      <div class="buttons_block">
+        <SButton :inner-text="'CSS'" />
+        <SButton :inner-text="'SCSS'"/>
+        <SButton :inner-text="'SASS'"/>
       </div>
       <div class="code_style_wrapper">
         body::-webkit-scrollbar { <br />
@@ -40,9 +42,12 @@
         solid slategrey; <br />
         }<br />
       </div>
-      <div>
-        <button>COPY</button>
+      <div class="buttons_block">
+
+        <SButton :inner-text="'copy'" />
       </div>
+
+
     </div>
   </div>
 </template>
@@ -138,9 +143,15 @@
     flex-direction: column;
     justify-content: center;
 
+    .buttons_block {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
     .code_style_wrapper {
       padding: 15px;
-      background: rgba(0,0,0, 0.15);
+      background: rgba(0, 0, 0, 0.15);
       margin: 20px 0;
     }
 
