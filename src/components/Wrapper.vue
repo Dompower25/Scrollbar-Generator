@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import SButton from './button/SButton.vue';
+import ScrollbarColorPicker from './inputs/ScrollbarColorPicker.vue';
+import ScrollbarEnteringSize from './inputs/ScrollbarEnteringSize.vue';
 </script>
 
 <template>
@@ -11,9 +13,15 @@ import SButton from './button/SButton.vue';
             <img src="../assets/Group 11.svg" alt="scrollbar" />
           </div>
           <div class="inputs_scrollbar_styles">
-            <div class="input_scrollbar_style">24px</div>
-            <div class="input_scrollbar_style">color picker</div>
-            <div class="input_scrollbar_style">8px</div>
+            <div class="input_scrollbar_style">
+              <ScrollbarEnteringSize />
+            </div>
+            <div class="input_scrollbar_style">
+              color picker
+            </div>
+            <div class="input_scrollbar_style">
+              <ScrollbarEnteringSize />
+            </div>
             <div class="input_scrollbar_style">color picker</div>
             <div class="input_scrollbar_style">2px</div>
             <div class="input_scrollbar_style">color picker</div>
@@ -25,9 +33,9 @@ import SButton from './button/SButton.vue';
     <div class="line"></div>
     <div class="style_block">
       <div class="buttons_block">
-        <SButton :inner-text="'CSS'" :color-text="'white'"/>
-        <SButton :inner-text="'SCSS'" :color-text="'white'"/>
-        <SButton :inner-text="'SASS'" :color-text="'white'"/>
+        <SButton :inner-text="'CSS'" :color-text="'white'" />
+        <SButton :inner-text="'SCSS'" :color-text="'white'" />
+        <SButton :inner-text="'SASS'" :color-text="'white'" />
       </div>
       <div class="code_style_wrapper">
         body::-webkit-scrollbar { <br />
@@ -44,7 +52,7 @@ import SButton from './button/SButton.vue';
       </div>
       <div class="buttons_block">
 
-        <SButton :inner-text="'copy'" background-color="rgb(224, 219, 219)"/>
+        <SButton :inner-text="'copy'" background-color="rgb(224, 219, 219)" />
       </div>
 
 
