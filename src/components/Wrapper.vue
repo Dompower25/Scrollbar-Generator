@@ -25,9 +25,9 @@ import SButton from './button/SButton.vue';
     <div class="line"></div>
     <div class="style_block">
       <div class="buttons_block">
-        <SButton :inner-text="'CSS'" />
-        <SButton :inner-text="'SCSS'"/>
-        <SButton :inner-text="'SASS'"/>
+        <SButton :inner-text="'CSS'" :color-text="'white'"/>
+        <SButton :inner-text="'SCSS'" :color-text="'white'"/>
+        <SButton :inner-text="'SASS'" :color-text="'white'"/>
       </div>
       <div class="code_style_wrapper">
         body::-webkit-scrollbar { <br />
@@ -44,7 +44,7 @@ import SButton from './button/SButton.vue';
       </div>
       <div class="buttons_block">
 
-        <SButton :inner-text="'copy'" />
+        <SButton :inner-text="'copy'" background-color="rgb(224, 219, 219)"/>
       </div>
 
 

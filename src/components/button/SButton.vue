@@ -13,7 +13,7 @@ defineProps({
     },
     backgroundColor: {
         type: String,
-        default: "white",
+        default: "none",
         required: true
     },
 
@@ -25,9 +25,9 @@ defineProps({
 
 
 <template>
-    <div class="wrapperButton" :style="{ color: colorText, background: backgroundColor }">
+    <button class="wrapperButton" :style="{ color: colorText, background: backgroundColor }">
         {{ innerText }}
-    </div>
+    </button>
 </template>
 
 
@@ -44,8 +44,9 @@ defineProps({
     padding: 6px 7px;
     margin: 0 10px;
 
+    border: none;
+
     border-radius: 3px;
-    background: rgb(224, 219, 219);
     color: black;
 
     &:first-child{
@@ -56,6 +57,12 @@ defineProps({
         margin-right: 0px !important;
     }
 
+    &:active {
+        text-shadow: 2px 1px 2px rgba(89, 137, 185, 0.836) !important;
+    }
+    
+    cursor: pointer;    
+    
 }
 
 </style>
