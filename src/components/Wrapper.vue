@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import SButton from './button/SButton.vue';
-import ScrollbarColorPicker from './inputs/ScrollbarColorPicker.vue';
-import ScrollbarEnteringSize from './inputs/ScrollbarEnteringSize.vue';
+import SButton from "./button/SButton.vue";
+import ScrollbarEnteringSize from "./inputs/ScrollbarEnteringSize.vue";
 </script>
 
 <template>
@@ -16,14 +15,14 @@ import ScrollbarEnteringSize from './inputs/ScrollbarEnteringSize.vue';
             <div class="input_scrollbar_style">
               <ScrollbarEnteringSize />
             </div>
-            <div class="input_scrollbar_style">
-              color picker
-            </div>
+            <div class="input_scrollbar_style">color picker</div>
             <div class="input_scrollbar_style">
               <ScrollbarEnteringSize />
             </div>
             <div class="input_scrollbar_style">color picker</div>
-            <div class="input_scrollbar_style">2px</div>
+            <div class="input_scrollbar_style">
+              <ScrollbarEnteringSize />
+            </div>
             <div class="input_scrollbar_style">color picker</div>
             <div class="input_scrollbar_style">border style picker</div>
           </div>
@@ -51,11 +50,8 @@ import ScrollbarEnteringSize from './inputs/ScrollbarEnteringSize.vue';
         }<br />
       </div>
       <div class="buttons_block">
-
         <SButton :inner-text="'copy'" background-color="rgb(224, 219, 219)" />
       </div>
-
-
     </div>
   </div>
 </template>
@@ -162,7 +158,6 @@ import ScrollbarEnteringSize from './inputs/ScrollbarEnteringSize.vue';
       background: rgba(0, 0, 0, 0.15);
       margin: 20px 0;
     }
-
   }
 }
 </style>
