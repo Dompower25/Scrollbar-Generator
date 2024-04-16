@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <input type="text" placeholder="8px" class="input"></input>
+  <input type="text" class="input" value="8px" />
 </template>
 
 <style lang="scss">
