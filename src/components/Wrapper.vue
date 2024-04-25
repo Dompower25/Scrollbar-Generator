@@ -64,7 +64,6 @@ import ScrollbarEnteringSize from "./inputs/ScrollbarEnteringSize.vue";
   width: 70%;
   height: 500px;
 
-  border: 1px solid rgb(223, 120, 120);
 
   display: flex;
   justify-content: space-between;
