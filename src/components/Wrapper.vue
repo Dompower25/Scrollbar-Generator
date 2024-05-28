@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import CopyWindow from "../components/copyWindow/CopyWindow.vue";
 import SButton from "./button/SButton.vue";
 import ScrollbarColorPicker from "./inputs/ScrollbarColorPicker.vue";
 import ScrollbarEnteringSize from "./inputs/ScrollbarEnteringSize.vue";
@@ -55,6 +56,7 @@ import ScrollbarEnteringSize from "./inputs/ScrollbarEnteringSize.vue";
       </div>
     </div>
   </div>
+  <CopyWindow :execution=false />
 </template>
 
 <style lang="scss">
@@ -63,7 +65,6 @@ import ScrollbarEnteringSize from "./inputs/ScrollbarEnteringSize.vue";
 .wrapper {
   width: 70%;
   height: 500px;
-
 
   display: flex;
   justify-content: space-between;

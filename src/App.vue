@@ -6,7 +6,9 @@ import Wrapper from "./components/Wrapper.vue";
   <div class="template">
     <div class="main_title">css scroll visual constructor</div>
     <Wrapper />
+
   </div>
+  
 </template>
 
 <style lang="scss">
