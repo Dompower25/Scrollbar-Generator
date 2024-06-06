@@ -3,7 +3,6 @@ defineProps({
   execution: {
     type: Boolean,
     default: true,
-    required: true,
   },
 });
 </script>
@@ -26,13 +25,17 @@ defineProps({
       />
 
       <div v-if="execution" class="textInformation">copy is successfully</div>
-      <div v-else class="textInformation">copy is unsuccessfully</div>
+      <div v-else class="textInformation">copy error</div>
     </div>
   </div>
 </template>
 
 <style lang="scss">
 .copyWind {
+  position: absolute;
+
+  bottom: 30px;
+  right: 30px;
   background: rgba(0, 0, 0, 0.03);
 
   box-sizing: border-box;
@@ -40,6 +43,10 @@ defineProps({
   border: 1px solid rgba(0, 0, 0, 0.07);
   background: rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
 
   .shell {
     margin: 6px 8px;

@@ -1,11 +1,17 @@
 <script setup lang="ts">
-import CopyWindow from "../components/copyWindow/CopyWindow.vue";
+import CopyWindow from "./copyWindow/CopyWindow.vue";
 import SButton from "./button/SButton.vue";
 import ScrollbarColorPicker from "./inputs/ScrollbarColorPicker.vue";
 import ScrollbarEnteringSize from "./inputs/ScrollbarEnteringSize.vue";
+import useCopyText from '../api/useCopyText';
+
+const tryCopy = () => {
+  console.log("click")
+}
 </script>
 
 <template>
+  
   <div class="wrapper">
     <div class="scrollbar_style_block">
       <section>
@@ -34,9 +40,9 @@ import ScrollbarEnteringSize from "./inputs/ScrollbarEnteringSize.vue";
     <div class="line"></div>
     <div class="style_block">
       <div class="buttons_block">
-        <SButton :inner-text="'CSS'" :color-text="'white'" />
-        <SButton :inner-text="'SCSS'" :color-text="'white'" />
+        <SButton :inner-text="'CSS'" :color-text="'white'"  />
         <SButton :inner-text="'SASS'" :color-text="'white'" />
+        <SButton :inner-text="'LESS'" :color-text="'white'" />
       </div>
       <div class="code_style_wrapper">
         body::-webkit-scrollbar { <br />
@@ -52,11 +58,10 @@ import ScrollbarEnteringSize from "./inputs/ScrollbarEnteringSize.vue";
         }<br />
       </div>
       <div class="buttons_block">
-        <SButton :inner-text="'copy'" background-color="rgb(224, 219, 219)" />
+        <SButton :foo="useCopyText" :inner-text="'copy'" background-color="rgb(224, 219, 219)" />
       </div>
     </div>
   </div>
-  <CopyWindow :execution=false />
 </template>
 
 <style lang="scss">
@@ -157,7 +162,11 @@ import ScrollbarEnteringSize from "./inputs/ScrollbarEnteringSize.vue";
     .code_style_wrapper {
       padding: 15px;
       background: rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
       margin: 20px 0;
+
+      font-family: "JetBrains Mono", monospace;
+      font-weight: 400;
     }
   }
 }
