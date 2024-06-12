@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import CopyInfo from "../copy/CopyInfo.vue";
 
 const props = defineProps({
   innerText: {
@@ -20,7 +21,6 @@ const props = defineProps({
     type: Function,
   },
 });
-
 </script>
 
 <template>
@@ -29,8 +29,10 @@ const props = defineProps({
     class="wrapperButton"
     :style="{ color: colorText, background: backgroundColor }"
   >
-    {{ innerText }}                                                                                   
+    {{ innerText }}
   </button>
+
+  <CopyInfo />
 </template>
 
 <style lang="scss">

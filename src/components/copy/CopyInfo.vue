@@ -1,16 +1,11 @@
 <script setup lang="ts">
+
 defineProps({
   execution: {
     type: Boolean,
     default: true,
   },
 });
-
-const copyHappy = () => {
-  console.log("copyWIndow component");
-};
-copyHappy();
-
 </script>
 
 <template>
