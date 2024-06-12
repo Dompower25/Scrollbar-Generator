@@ -1,10 +1,19 @@
 <script setup lang="ts">
+import { onMounted, onUnmounted } from "vue";
 
 defineProps({
   execution: {
     type: Boolean,
     default: true,
   },
+});
+
+onMounted(() => {
+  console.log("компонент смонтирован");
+});
+
+onUnmounted(() => {
+  console.log("компонент размонтирован");
 });
 </script>
 

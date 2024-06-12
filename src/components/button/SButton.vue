@@ -21,6 +21,7 @@ const props = defineProps({
     type: Function,
   },
 });
+
 </script>
 
 <template>
@@ -32,7 +33,7 @@ const props = defineProps({
     {{ innerText }}
   </button>
 
-  <CopyInfo />
+  <!-- <CopyInfo /> -->
 </template>
 
 <style lang="scss">
