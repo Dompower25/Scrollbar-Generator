@@ -9,17 +9,18 @@ const props = defineProps({
   colorText: {
     type: String,
     default: "black",
-    required: true,
+    required: false,
   },
   backgroundColor: {
     type: String,
     default: "none",
-    required: true,
+    required: false,
   },
   foo: {
     type: Function,
   },
 });
+
 </script>
 
 <template>
@@ -28,9 +29,8 @@ const props = defineProps({
     class="wrapperButton"
     :style="{ color: colorText, background: backgroundColor }"
   >
-    {{ innerText }}
+    {{ innerText }}                                                                                   
   </button>
-
 </template>
 
 <style lang="scss">
@@ -64,11 +64,10 @@ const props = defineProps({
   }
 
   &:active {
-    font-weight: 600;
+    text-shadow: 1px 1px #00000077;
   }
 
   &:focus {
-    font-weight: 600;
     &::before {
       content: "";
       position: absolute;

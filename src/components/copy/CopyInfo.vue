@@ -5,6 +5,12 @@ defineProps({
     default: true,
   },
 });
+
+const copyHappy = () => {
+  console.log("copyWIndow component");
+};
+copyHappy();
+
 </script>
 
 <template>

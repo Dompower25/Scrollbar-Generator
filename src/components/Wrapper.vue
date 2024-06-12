@@ -1,16 +1,14 @@
 <script setup lang="ts">
-import CopyWindow from "./copyWindow/CopyWindow.vue";
 import SButton from "./button/SButton.vue";
 import ScrollbarColorPicker from "./inputs/ScrollbarColorPicker.vue";
 import ScrollbarEnteringSize from "./inputs/ScrollbarEnteringSize.vue";
-import useCopyText from '../api/useCopyText';
 
-const tryCopy = () => {
-  console.log("click")
-}
+import useCopyText from '../api/useCopyText.js';
+
 </script>
 
 <template>
+
   
   <div class="wrapper">
     <div class="scrollbar_style_block">
@@ -58,7 +56,7 @@ const tryCopy = () => {
         }<br />
       </div>
       <div class="buttons_block">
-        <SButton :foo="useCopyText" :inner-text="'copy'" background-color="rgb(224, 219, 219)" />
+        <SButton :foo="useCopyText"  :inner-text="'copy'" background-color="rgb(224, 219, 219)" />
       </div>
     </div>
   </div>
