@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref } from "vue";
 import CopyInfo from "../copy/CopyInfo.vue";
 
 const props = defineProps({
@@ -22,18 +23,33 @@ const props = defineProps({
   },
 });
 
+const showState = ref(false);
+const dynamicClass = ref("");
+
+
+function showCopyInfo() {
+  dynamicClass.value = "mounted";
+  showState.value = true;
+
+  setTimeout(() => {
+    dynamicClass.value = "unmounted";
+    setTimeout(() => {
+      showState.value = false;
+    }, 200);
+  }, 2000);
+}
 </script>
 
 <template>
   <button
-    v-on:click="props.foo"
+    v-on:click="showCopyInfo"
     class="wrapperButton"
     :style="{ color: colorText, background: backgroundColor }"
   >
     {{ innerText }}
   </button>
 
-  <!-- <CopyInfo /> -->
+  <CopyInfo v-if="showState" :dynamic-style="dynamicClass" />
 </template>
 
 <style lang="scss">

@@ -3,13 +3,10 @@ import SButton from "./button/SButton.vue";
 import ScrollbarColorPicker from "./inputs/ScrollbarColorPicker.vue";
 import ScrollbarEnteringSize from "./inputs/ScrollbarEnteringSize.vue";
 
-import useCopyText from '../api/useCopyText.js';
-
+import useCopyText from "../api/useCopyText.js";
 </script>
 
 <template>
-
-  
   <div class="wrapper">
     <div class="scrollbar_style_block">
       <section>
@@ -38,7 +35,7 @@ import useCopyText from '../api/useCopyText.js';
     <div class="line"></div>
     <div class="style_block">
       <div class="buttons_block">
-        <SButton :inner-text="'CSS'" :color-text="'white'"  />
+        <SButton :inner-text="'CSS'" :color-text="'white'" />
         <SButton :inner-text="'SASS'" :color-text="'white'" />
         <SButton :inner-text="'LESS'" :color-text="'white'" />
       </div>
@@ -56,7 +53,11 @@ import useCopyText from '../api/useCopyText.js';
         }<br />
       </div>
       <div class="buttons_block">
-        <SButton :foo="useCopyText"  :inner-text="'copy'" background-color="rgb(224, 219, 219)" />
+        <SButton
+          :foo="useCopyText"
+          :inner-text="'copy'"
+          background-color="rgb(224, 219, 219)"
+        />
       </div>
     </div>
   </div>

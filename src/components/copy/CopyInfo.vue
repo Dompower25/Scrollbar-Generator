@@ -1,24 +1,20 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted } from "vue";
+import { onMounted, ref } from "vue";
 
-defineProps({
+const props = defineProps({
   execution: {
     type: Boolean,
     default: true,
   },
+  dynamicStyle: {
+    type: String,
+  },
 });
 
-onMounted(() => {
-  console.log("компонент смонтирован");
-});
-
-onUnmounted(() => {
-  console.log("компонент размонтирован");
-});
 </script>
 
 <template>
-  <div class="copyWind">
+  <div class="copyWind" :class="dynamicStyle">
     <div class="shell">
       <img
         v-if="execution"
@@ -78,6 +74,33 @@ onUnmounted(() => {
       text-transform: uppercase;
       align-self: center;
     }
+  }
+}
+
+.mounted {
+  animation-duration: 0.3s;
+  animation-name: mountedStyle;
+}
+.unmounted {
+  animation-duration: 0.3s;
+  animation-name: unmountedStyle;
+}
+
+@keyframes mountedStyle {
+  0% {
+    transform: translateX(30px);
+  }
+  100% {
+    right: 30px;
+  }
+}
+
+@keyframes unmountedStyle {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 5%;
   }
 }
 </style>
