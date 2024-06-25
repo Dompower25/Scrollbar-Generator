@@ -12,14 +12,14 @@ const getCssClass = (className: string, properties: {}, indentSize: number) => {
   return (
     className +
     "{\n " +
-    Object.entries(properties).map(
-      ([key, value]) => indent(indentSize) + `${key}: ${value};`
-    ) +
-    "/n}"
+    Object.entries(properties).map((key, value) => {
+      console.log(key, value), indent(indentSize) + `${key}: ${value};`;
+    }) +
+    "\n}"
   );
 };
 
-console.log(getCssClass(".body", { 'color': "green" }, 4));
+console.log(getCssClass(".body", { color: "green" }, 4));
 </script>
 
 <template>
