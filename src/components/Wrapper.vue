@@ -4,6 +4,22 @@ import ScrollbarColorPicker from "./inputs/ScrollbarColorPicker.vue";
 import ScrollbarEnteringSize from "./inputs/ScrollbarEnteringSize.vue";
 
 import useCopyText from "../api/useCopyText.js";
+
+const indent = (size: number) => {
+  new Array(size).fill(" ").join("");
+};
+const getCssClass = (className: string, properties: {}, indentSize: number) => {
+  return (
+    className +
+    "{\n " +
+    Object.entries(properties).map(
+      ([key, value]) => indent(indentSize) + `${key}: ${value};`
+    ) +
+    "/n}"
+  );
+};
+
+console.log(getCssClass(".body", { 'color': "green" }, 4));
 </script>
 
 <template>
@@ -40,17 +56,10 @@ import useCopyText from "../api/useCopyText.js";
         <SButton :inner-text="'LESS'" :color-text="'white'" />
       </div>
       <div class="code_style_wrapper">
-        body::-webkit-scrollbar { <br />
-        width: 1em; <br />
-        } <br />
-        body::-webkit-scrollbar-track {<br />
-        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); <br />
-        }<br />
-        body::-webkit-scrollbar-thumb { <br />
-        background-color: darkgrey; <br />
-        outline: 1px;<br />
-        solid slategrey; <br />
-        }<br />
+        body::-webkit-scrollbar { width: 1em; } body::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
+        body::-webkit-scrollbar-thumb { background-color: darkgrey; outline:
+        1px; solid slategrey; }
       </div>
       <div class="buttons_block">
         <SButton
