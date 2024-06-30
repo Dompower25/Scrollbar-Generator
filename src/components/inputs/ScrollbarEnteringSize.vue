@@ -9,7 +9,8 @@ const props = defineProps({
 });
 
 const checkingForNumber = (value: Number | String) => {
-  if (typeof value !== "number") {
+  console.log(value);
+  if (typeof(value) !== "number") {
     console.log("this not number");
     return "";
   }
@@ -21,7 +22,13 @@ console.log(valueSize.value, "valueSize");
 </script>
 
 <template>
-  <input type="text" class="input" placeholder="8 px" v-model="valueSize" @change="" />
+  <input
+    type="text"
+    class="input"
+    placeholder="8 px"
+    v-model="valueSize"
+    @change="checkingForNumber($event.target?.value)"
+  />
 </template>
 
 <style lang="scss">
