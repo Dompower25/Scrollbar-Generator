@@ -6,20 +6,19 @@ import ScrollbarEnteringSize from "./inputs/ScrollbarEnteringSize.vue";
 import useCopyText from "../api/useCopyText.js";
 
 const indent = (size: number) => {
-  new Array(size).fill(" ").join("");
+  return new Array(size).fill(" ").join("");
 };
+
 const getCssClass = (className: string, properties: {}, indentSize: number) => {
   return (
     className +
-    "{\n " +
-    Object.entries(properties).map((key, value) => {
-      console.log(key, value), indent(indentSize) + `${key}: ${value};`;
+    " {\n " +
+    Object.entries(properties).map((value) => {
+      return indent(indentSize) + `${value[0]}: ${value[1]};`;
     }) +
     "\n}"
   );
 };
-
-console.log(getCssClass(".body", { color: "green" }, 4));
 </script>
 
 <template>
@@ -32,15 +31,15 @@ console.log(getCssClass(".body", { color: "green" }, 4));
           </div>
           <div class="inputs_scrollbar_styles">
             <div class="input_scrollbar_style">
-              <ScrollbarEnteringSize />
+              <ScrollbarEnteringSize :default-size="5" />
             </div>
             <div class="input_scrollbar_style"><ScrollbarColorPicker /></div>
             <div class="input_scrollbar_style">
-              <ScrollbarEnteringSize />
+              <ScrollbarEnteringSize :default-size="2" />
             </div>
             <div class="input_scrollbar_style"><ScrollbarColorPicker /></div>
             <div class="input_scrollbar_style">
-              <ScrollbarEnteringSize />
+              <ScrollbarEnteringSize :default-size="0.2" />
             </div>
             <div class="input_scrollbar_style"><ScrollbarColorPicker /></div>
             <div class="input_scrollbar_style">border style picker</div>
