@@ -8,26 +8,20 @@ const props = defineProps({
   },
 });
 
+const checkingForNumber = (value: Number | String) => {
+  if (typeof value !== "number") {
+    console.log("this not number");
+    return "";
+  }
+  return value;
+};
 
-// const checkingForNumber = (value: Number | String) => {
-//   if (typeof value !== Number) {
-//     return "";
-//   }
-//   return value;
-// };
-
-
-const valueSize = ref(checkingForNumber(props.defaultSize));
+const valueSize = ref(checkingForNumber(props.defaultSize) + "px");
+console.log(valueSize.value, "valueSize");
 </script>
 
 <template>
-  <input
-    type="text"
-    class="input"
-    :value="valueSize"
-    placeholder="8 px"
-    @input="valueSize = $event.target.value"
-  />
+  <input type="text" class="input" placeholder="8 px" v-model="valueSize" @change="" />
 </template>
 
 <style lang="scss">
