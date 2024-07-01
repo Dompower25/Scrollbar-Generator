@@ -9,25 +9,26 @@ const props = defineProps({
 });
 
 const checkingForNumber = (value: Number | String) => {
-  console.log(value);
-  if (typeof(value) !== "number") {
-    console.log("this not number");
+  if (typeof value !== "number") {
     return "";
   }
   return value;
 };
 
-const valueSize = ref(checkingForNumber(props.defaultSize) + "px");
-console.log(valueSize.value, "valueSize");
+const valueSize = ref(checkingForNumber(props.defaultSize) + " px");
+
+// требуется сделать backup версию значения инпута и если значение не изменилось вернуть прежнее значение.
+// при взаимодействии с инспутом в виде клика на него, значение valueSize изменяется на ''
 </script>
 
 <template>
   <input
     type="text"
     class="input"
-    placeholder="8 px"
     v-model="valueSize"
-    @change="checkingForNumber($event.target?.value)"
+    @input="checkingForNumber(Number($event.target?.value))"
+    @click="valueSize = ''"
+    @focusout="valueSize = valueSize + ' px'"
   />
 </template>
 
