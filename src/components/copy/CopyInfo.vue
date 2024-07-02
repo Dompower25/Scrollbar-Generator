@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
-
-const props = defineProps({
+defineProps({
   execution: {
     type: Boolean,
     default: true,
@@ -10,7 +8,6 @@ const props = defineProps({
     type: String,
   },
 });
-
 </script>
 
 <template>

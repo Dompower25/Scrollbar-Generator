@@ -5,20 +5,21 @@ import ScrollbarEnteringSize from "./inputs/ScrollbarEnteringSize.vue";
 
 import useCopyText from "../api/useCopyText.js";
 
-const indent = (size: number) => {
-  return new Array(size).fill(" ").join("");
-};
+// const indent = (size: number) => {
+//   return new Array(size).fill(" ").join("");
+// };
 
-const getCssClass = (className: string, properties: {}, indentSize: number) => {
-  return (
-    className +
-    " {\n " +
-    Object.entries(properties).map((value) => {
-      return indent(indentSize) + `${value[0]}: ${value[1]};`;
-    }) +
-    "\n}"
-  );
-};
+// const getCssClass = (className: string, properties: {}, indentSize: number) => {
+//   return (
+//     className +
+//     " {\n " +
+//     Object.entries(properties).map((value) => {
+//       return indent(indentSize) + `${value[0]}: ${value[1]};`;
+//     }) +
+//     "\n}"
+//   );
+// };
+
 </script>
 
 <template>

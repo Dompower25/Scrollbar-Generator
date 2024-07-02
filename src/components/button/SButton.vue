@@ -2,7 +2,7 @@
 import { ref } from "vue";
 import CopyInfo from "../copy/CopyInfo.vue";
 
-const props = defineProps({
+defineProps({
   innerText: {
     type: String,
     default: "inner-Text",
